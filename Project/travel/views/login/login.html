@@ -1,0 +1,65 @@
+﻿<div class="modal-content">
+    <div class="modal-header login-modal">
+        <div class="col-lg-6 signIn-header">
+            <a class="login-header" ng-click="toggle('signIn')">SignIn</a>
+        </div>
+        <div class="col-lg-6 signUp-header">
+            <a class="login-header" ng-click="toggle('signUp')">SignUp</a>
+        </div>
+    </div>
+    <div class="modal-body ng-scope">
+        <div class="row" ng-show="!signUpClicked">
+            <form class="form-horizontal ng-pristine ng-valid" role="form">
+                <div class="form-group">
+                    <div class="input-group login-input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                        <input ng-model="email" ng-focus="focused()" placeholder=" your email *" class="form-control ng-pristine ng-valid ng-touched" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group login-input-group">
+                        <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                        <input ng-model="password" ng-change="focused()" placeholder="Your Password *" class="form-control ng-pristine ng-valid ng-touched" type="password">
+                    </div>
+                </div>
+            </form>
+            <div ng-show="login_error" style="text-align:center">
+                <span style="color:red">email or password is wrong</span>
+            </div>
+        </div>
+
+        <div class="row" ng-show="signUpClicked">
+            <form name="signupForm" class="form-horizontal ng-pristine ng-valid" role="form">
+                <div class="form-group">
+                    <div class="input-group login-input-group" ng-class="{ 'has-error': signupForm.username.$invalid }">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input ng-model="username" ng-focus="focused()" name="username" placeholder="Username *" ng-class="{'has-error': myForm.username.$invalid}" class="form-control ng-pristine ng-valid ng-touched" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group login-input-group" ng-class="{'has-error': signupForm.email.$invalid}">
+                        <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                        <input ng-model="email" ng-focus="focused()" name="email" placeholder="Your Email *" class="form-control ng-pristine ng-valid ng-touched" type="email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group login-input-group">
+                        <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                        <input ng-model="password" ng-click="focused()" placeholder="Your Password *" class="form-control ng-pristine ng-valid ng-touched" type="password">
+                    </div>
+                </div>
+            </form>
+            <div ng-show="signup_error" style="text-align:center">
+                <span style="color:red">choose a different username</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer login-modal-footer" ng-show="!signUpClicked">
+        <button id="clickText" type="button" class="btn btn-primary" ng-click="signIn()">Login</button>
+    </div>
+
+    <div class="modal-footer login-modal-footer" ng-show="signUpClicked">
+        <button id="clickText" type="button" class="btn btn-primary" ng-click="signUp()">Create Account</button>
+    </div>
+</div><!-- /.modal-content -->

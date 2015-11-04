@@ -1,0 +1,77 @@
+﻿<nav id="other-pages-nav" class="navbar navbar-default ng-scope" style="margin-bottom:0px">
+    <div class="main-header" style="margin-left:20px; margin-right:20px">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="travel-logo">
+                <a href="#/home" style="text-decoration:none">
+                    <span id="logo-first-name">Travel<span id="logo-second-name">Globe</span></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="" ng-click="scrollTo('#page-top')"></a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/dashboard">DashBoard</a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/profile/{{currentUser}}">Profile</a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/messages/{{currentUser}}">Messages</a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/home" ng-click="logout()">Logout</a>
+                </li>
+                <li ng-show="!currentUser">
+                    <a class="page-scroll" href="" ng-click="open('signIn')">Login</a>
+                </li>
+                <li ng-show="!currentUser">
+                    <a class="page-scroll" href="" ng-click="open('signUp')">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div class="place-options" style="background-image:url({{cityImage}})">
+    <div class="inner-place-options">
+        <img class="place-icon" src="res/food.png" ng-click="getPlaceInfo('food')" data-toggle="tooltip" data-placement="left" title="Search for food" />
+        <img class="place-icon" src="res/drink.png" ng-click="getPlaceInfo('drinks')" data-toggle="tooltip" data-placement="left" title="Search for drinks" />
+        <img class="place-icon" src="res/sights.jpg" ng-click="getPlaceInfo('sights')" data-toggle="tooltip" data-placement="left" title="Search for sights" />
+        <img class="place-icon" src="res/shops.png" ng-click="getPlaceInfo('shops')" data-toggle="tooltip" data-placement="left" title="Search for shops" />
+    </div>
+</div>
+
+<h2 class="poi-heading">Recommended Places in {{cityName}}: {{selectedItem}}</h2>
+
+<div class="container point-of-interest" >
+    <div class="city-suggested-places" ng-repeat="item in items">
+        <div>
+            <div class="col-lg-2 col-md-2 col-sm-2">
+                <img class="poi-image" ng-src="{{item.venue.featuredPhotos.items[0].prefix + item.venue.featuredPhotos.items[0].width +'x'+ item.venue.featuredPhotos.items[0].height + item.venue.featuredPhotos.items[0].suffix}}" />
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                <div class="poi-name">{{item.venue.name}}</div>
+                <div class="poi-address">{{item.venue.location.formattedAddress[0]}}, {{item.venue.location.formattedAddress[1]}}, {{item.venue.location.formattedAddress[2]}} </div>
+                <div class="poi-venue">website: <a href="{{item.venue.url}}" target="_blank">{{item.venue.url}}</a></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 poi-price">
+                <div>Rating: {{item.venue.rating}}</div>
+                <div ng-show="{{priceValid}}">Price: {{item.venue.price.currency}}</div>
+            </div>
+        </div>        
+    </div>
+</div>

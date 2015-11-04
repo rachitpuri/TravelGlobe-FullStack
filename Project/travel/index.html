@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel World</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Gem style -->
+    
+    <link rel="stylesheet" href="css/test.css" />
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/travel.css" rel="stylesheet">
+    <link href="css/ngToast.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+<body ng-app="Travel" class="ng-scope">
+
+    <div ng-view>
+
+    </div>
+
+    <div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="js/modernizr.js"></script> <!-- Modernizr -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-cookies.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-sanitize.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-animate.min.js"></script>
+        <script type="text/javascript" src="js/ngAutocomplete.js"></script>
+        <script type="text/javascript" src="js/ngToast.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.1/ui-bootstrap-tpls.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <script type='text/javascript' src='js/ng-infinite-scroll.min.js'></script>
+        <script type="text/javascript" src="js/angular.dcb-img-fallback.min.js"></script>
+        <!-- loading all my js files -->
+        <script type="text/javascript" src="js/travel.js"></script>
+        <script type="text/javascript" src="views/home/HomeController.js"></script>
+        <script type="text/javascript" src="views/city/CityController.js"></script>
+        <script type="text/javascript" src="views/dashboard/DashBoardController.js"></script>
+        <script type="text/javascript" src="views/message/MessageController.js"></script>
+        <script type="text/javascript" src="views/messageDetails/MessageDetailController.js"></script>
+        <script type="text/javascript" src="views/profile/ProfileController.js"></script>
+        <script type="text/javascript" src="views/review/ReviewController.js"></script>
+        <script type="text/javascript" src="views/sendMessage/sendMessageController.js"></script>
+        <script type="text/javascript" src="views/poi/PointOfInterestController.js"></script>
+        <script type="text/javascript" src="views/login/loginController.js"></script>
+        <script type="text/javascript" src="views/changePassword/passwordController.js"></script>
+    </div>
+</body>
+</html>

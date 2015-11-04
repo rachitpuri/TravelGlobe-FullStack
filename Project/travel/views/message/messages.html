@@ -1,0 +1,75 @@
+﻿<nav id="other-pages-nav" class="navbar navbar-default ng-scope">
+    <div class="main-header" style="margin-left:20px; margin-right:20px">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="travel-logo">
+                <a href="#/home" style="text-decoration:none">
+                    <span id="logo-first-name">Travel<span id="logo-second-name">Globe</span></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="" ng-click="scrollTo('#page-top')"></a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/dashboard">DashBoard</a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/profile/{{currentUser}}">Profile</a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/messages/{{currentUser}}">Messages</a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/home" ng-click="logout()">Logout</a>
+                </li>
+                <li ng-show="!currentUser">
+                    <a class="page-scroll" href="" ng-click="open('signIn')">Login</a>
+                </li>
+                <li ng-show="!currentUser">
+                    <a class="page-scroll" href="" ng-click="open('signUp')">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+<!--<div class="logo-back-color" style="overflow: auto;">
+    <a href="#/home">
+        <i class="fa fa-plane pull-left" id="logo"><span id="logo-first-name">Travel<span id="logo-second-name">Globe</span></span></i>
+    </a>
+</div>-->
+
+<h1 style="text-align:center; font-size:xx-large; margin-top:10px">Inbox</h1>
+
+<div class="container">
+    <table class="table message-table">
+        <tbody>
+            <tr class="messages" ng-click="click(mail)" ng-repeat="mail in mails">
+                <td class="senderImage col-lg-2">
+                    <img src="{{mail.image}}"/>
+                </td>
+                <td class="messageTime col-lg-2">
+                    <div id="message-userName">{{mail.user}}</div>
+                    <div>{{mail.date | date: 'longDate'}}</div>
+                </td>
+                <td class="messageDetail col-lg-8">
+                    {{mail.msg}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

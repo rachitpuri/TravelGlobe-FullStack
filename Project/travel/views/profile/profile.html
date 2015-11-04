@@ -1,0 +1,105 @@
+﻿<nav id="other-pages-nav" class="navbar navbar-default ng-scope">
+    <div class="main-header" style="margin-left:20px; margin-right:20px">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="travel-logo">
+                <a href="#/home" style="text-decoration:none">
+                    <span id="logo-first-name">Travel<span id="logo-second-name">Globe</span></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="" ng-click="scrollTo('#page-top')"></a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/dashboard">DashBoard</a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/profile/{{currentUser}}">Profile</a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/messages/{{currentUser}}">Messages</a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/home" ng-click="logout()">Logout</a>
+                </li>
+                <li ng-show="!currentUser">
+                    <a class="page-scroll" href="" ng-click="open('signIn')">Login</a>
+                </li>
+                <li ng-show="!currentUser">
+                    <a class="page-scroll" href="" ng-click="open('signUp')">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<toast></toast>
+<div class="container">
+    <div class="profile row">
+        <div class="profile-left-col col-lg-2 col-md-2 col-sm-2">
+            <form action="/upload" enctype="multipart/form-data" method="post">
+                <img ng-src="{{loc || 'img/user.png'}}" class="img-circle">
+                <input class="unused" ng-show="editable" id="filePicker" type="file" name="thumbnail">
+                <input type="hidden" name="username" value="{{user.username}}" />
+                <input class="upload" type="submit" ng-show="editable" value="Upload">
+            </form>
+            <ul ng-show="!editable">
+                <li>Followers : {{user.followers.length}}</li>
+                <li>Following : {{user.following.length}}</li>
+            </ul>
+            <button id="message" ng-show="!editable" class="btn btn-primary" ng-click="openMessage()">Message</button>
+            <button id="follower" ng-show="!editable" ng-click="follow(user.username)" class="btn btn-success">{{toggleText}}</button>
+        </div>
+
+        
+        <table class="user-info col-lg-9 col-md-9 col-sm-9 table" style="width:80%">
+            <tbody>
+                <tr>
+                    <td class="col-lg-3 col-md-3 col-sm-3 profile-title">Username:</td>
+                    <td class="col-lg-9 col-md-9 col-sm-9">{{user.username}}</td>
+                </tr>
+                <tr>
+                    <td class="col-lg-3 col-md-3 col-sm-3 profile-title">Email:</td>
+                    <td class="col-lg-9 col-md-9 col-sm-9">{{user.email}}</td>
+                </tr>
+                <tr>
+                    <td class="col-lg-3 col-md-3 col-sm-3 profile-title">Countries Visited:</td>
+                    <td ng-show="editable" class="col-lg-9 col-md-9 col-sm-9">
+                        <textarea id="country" placeholder="India, Korea, Thailand, USA">{{user.countriesVisited}}</textarea>
+                    </td>
+                    <td ng-show="!editable" class="col-lg-9 col-md-9 col-sm-9">
+                        <p id="country">{{user.countriesVisited}}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-lg-3 col-md-3 cols-sm-3 profile-title" style="vertical-align:top; padding-top:25px"><span>About Me:</span></td>
+                    <td ng-show="editable" class="col-lg-9 col-md-9 col-sm-9">
+                        <textarea id="description" placeholder="Tell us something about yourself">{{user.description}}</textarea>
+                    </td>
+                    <td ng-show="!editable" class="col-lg-9 col-md-9 col-sm-9">
+                        <p id="description">{{user.description}}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+          
+      <div class="profile-submit-changes" ng-show="editable">
+           <button style="align-content:center" ng-click="saveChanges()" class="btn btn-success saveChanges">Save Changes</button>
+           <button style="align-content:center" class="btn btn-success changePassword" ng-click="changePassword()">Change Password</button>
+       </div>
+        
+</div>

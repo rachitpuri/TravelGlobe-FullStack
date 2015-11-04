@@ -1,0 +1,1141 @@
+﻿.main-header{
+    margin-left:20px; 
+    margin-right:20px;
+}
+
+.travel-logo{
+    width:200px; 
+    float:left; 
+    margin-left:10px; 
+    font-family:initial; 
+    margin-top:5px;
+}
+
+.send-message-modal textarea {
+    width:540px; 
+    height:200px;
+}
+
+.text-over-image {
+    position: absolute; 
+    left: 0; 
+    width: 100%; 
+    text-align:center; 
+    color:white;
+    font-size:xx-large;
+    font-weight:600;
+    text-transform:capitalize;
+}
+
+.best-place {
+ opacity: 1.0;
+ transition: opacity 1s ease-in-out;
+ -moz-transition: opacity 1s ease-in-out;
+ -webkit-transition: opacity 1s ease-in-out;
+ -webkit-box-shadow: 3px 3px 3px #7C7C7C;
+  box-shadow: 3px 3px 3px #7C7C7C;
+ }
+
+.best-place:hover {
+ opacity: .6;
+ transition: opacity .55s ease-in-out;
+ -moz-transition: opacity .55s ease-in-out;
+ -webkit-transition: opacity .55s ease-in-out;
+ cursor:pointer;
+ }
+
+.discover-titles h2{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.discover-titles p {
+    text-align: center;
+    margin-top: 8px;
+    font-size: larger;
+    font-family: initial;
+}
+
+.review-heading {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: larger;
+  color: white;
+  font-family: -webkit-body;
+  background-color: #354a5f;
+  line-height: initial;
+}
+
+.review-cityName{
+  font-family: sans-serif;
+  font-size: large;
+  font-weight: 700;
+}
+
+.review-title{
+  padding-left:0px;
+  font-weight: 500;
+  font-style: italic;
+  font-family: -webkit-body;
+}
+
+.review-story{
+  margin-top: 20px;
+  text-align: justify;
+  line-height: 20px;
+}
+
+.intro-area {
+  color: white;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: xx-large;
+  /* text-decoration: overline; */
+  margin-top: 150px;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#message-userName {
+    text-transform:capitalize;
+}
+
+#logo {
+    font-size: -webkit-xxx-large; 
+    width: 60px; 
+    height: 60px; 
+    float: left; 
+    margin-left: 10px; 
+    margin-top: 10px; 
+    color: chocolate;
+}
+
+.readmore:hover{
+    cursor:pointer;
+}
+
+@-webkit-keyframes spaceboots {
+    0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.place-icon:hover{
+    cursor:pointer;
+    -webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 0.8s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: 3;
+	-webkit-animation-timing-function: linear;
+}
+
+.place-options{
+    height:240px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:center;
+    text-align:center;
+    z-index:-1;
+}
+
+.inner-place-options {
+    vertical-align:middle; 
+    z-index:1;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:30px;
+}
+
+.city-suggested-places {
+    background-color: beige;
+    background-clip: content-box;
+    overflow:auto; 
+    padding:5px 10px 5px 10px;
+}
+
+.poi-heading {
+    text-align: center;
+    font-size: xx-large;
+    font-family: cursive;
+    margin-top: 20px;
+    color: brown;
+}
+
+#fa-plane-home {
+    font-size: -webkit-xxx-large; 
+    width: 60px; 
+    height: 60px; 
+    float: left; 
+    margin-left: 10px; 
+    margin-top: 10px; 
+    color:white;
+}
+
+.cityName {
+    text-align:center;
+}
+
+#cityName-style {
+    font-size: xx-large;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.cityDetail {
+    padding: 10px;
+    overflow:auto;
+}
+
+.temp {
+    font-size:x-large; 
+    text-align:right
+}
+
+.city-item-select {
+    line-height: 59px;
+    font-size: larger;
+    font-weight: 600;
+    font-family: initial;
+}
+
+#city-list:hover {
+    cursor:pointer;
+    /*opacity:0.5;*/
+    background-color:lightblue;
+}
+
+#city-item-icon {
+    width:45px;
+    margin-left:10px;
+}
+
+#city-list {
+  background-color: beige;
+  border-bottom: 1px solid black;
+}
+
+#city-item-arrow {
+  height: 25px;
+  float: right;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+#logo-first-name {
+    font-size: xx-large;
+    color:coral;
+}
+
+#logo-second-name {
+    color:cadetblue;
+}
+
+@media only screen and (min-width : 1200px) {
+
+    .user-comment{
+        width:80%;
+    }
+ 
+    .profile {
+        margin-top:60px; 
+        width:80%; 
+        margin-bottom:50px; 
+        margin-left:auto; 
+        margin-right:auto
+    }
+}
+
+
+@media only screen and (max-width : 1200px) {
+    .cityMap{
+        display:none;
+    }
+
+    .city-item-select {
+        line-height:59px;
+    }
+
+    .user-comment {
+        width:100%;
+    }
+}
+
+@media only screen and (min-width : 768px) {
+/* Styles */
+    .search-city {
+        width:500px;
+    }
+    .city-all-items{
+        margin-top:40px;
+    }
+
+    .cityRight{
+        float:left;
+    }
+    .discover-titles-image{
+         padding-left: 15px; 
+         padding-right: 15px; 
+         padding-bottom: 15px; 
+         margin-top: 50px; 
+         float:left; 
+         position: relative;
+    }
+    .text-over-image{
+        top:150px;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .best-place{
+        height:300px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:30px;
+    }
+
+    .text-over-image{
+        top:140px;
+    }
+}
+
+@media only screen and (min-width : 480px) {
+
+    .city-Total-Review {
+        line-height: 40px;
+        font-weight: 700;
+        font-size: large;
+    }
+    
+    .city-Rating {
+        line-height: 40px; 
+        font-weight: 700; 
+        font-size: large;
+    }
+    
+    .writeReview {
+        width:120px; 
+        height:35px;
+    }
+
+    .writeReview > span {
+        font-size:larger;
+    }
+
+    .city-reviews .review-date {
+        line-height:30px;
+    }
+}
+
+@media only screen and (max-width : 480px){
+
+    .contribution {
+        font-size:small;
+    }
+    .city-reviews .review-date {
+        line-height:30px;
+        font-size:small;
+    }
+
+    .best-place {
+        height:200px;
+    }
+    .text-over-image{
+        top:60px;
+    }
+    .intro-area{
+        color: white;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: large;
+        margin-top: 250px;
+        font-weight: 500;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .cityRight {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .city-all-items{
+        margin-bottom:20px;
+    }
+    .writeReview {
+        width:100px; 
+        height:30px;
+    }
+
+    .writeReview > span {
+        font-size:small;
+    }
+
+    .city-Rating {
+        font-size:small;
+        margin-top:6px;
+    }
+
+    .city-Total-Review{
+        font-size:small;
+        margin-top:6px;
+    }
+    .userData {
+        padding-left:0px;
+    }
+
+    .place-icon{
+        height:60px;
+        padding-right:15px;
+        margin-top:20px
+    }
+
+    .inner-place-options {
+        width:60%;
+    }
+}
+
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+    /* Styles */
+
+    .search-city {
+        width:400px;
+    }
+    
+    .navbar-right {
+        float: right!important;
+    }
+
+    .navbar-nav>li {
+        float: left;
+    }
+
+    .intro-area{
+        color: white;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: x-large;
+        margin-top: 250px;
+        font-weight: 500;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .city-all-items{
+        margin-top:10px;
+        margin-bottom:20px;
+    }
+
+    .cityRight{
+        float:none;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .place-icon{
+        height:80px;
+        padding-right:10px;
+        margin-top:20px
+    }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 992px) {
+    .best-place {
+        height:250px;
+    }
+    .text-over-image{
+        top:100px;
+    }
+    .place-icon{
+        height:100px;
+        padding-right:40px;
+        margin-top:20px
+    }
+}
+
+@media only screen and (min-width : 992px){
+    .best-place {
+        height:350px;
+    }
+
+    .cityTitle {
+        font-size: xx-large; 
+        margin-top:30px; 
+        text-align:left; 
+        color:white;
+    }
+ 
+   .place-icon{
+        height:150px;
+        padding-right:40px;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .followers{
+        margin-left:auto;
+        margin-right:auto;
+        align-content:center;
+        margin-top:20px;
+    }
+
+    .cityTitle {
+        font-size: larger; 
+        margin-top:30px; 
+        text-align:left; 
+        color:white;
+    }
+}
+
+.profile-title {
+    font-weight:600;
+}
+
+.logo-back-color{
+    background-color:white;
+    overflow:auto;
+}
+
+.login-header:hover{
+    cursor:pointer;
+}
+
+input[type=file].unused{ 
+        color:transparent;
+    }
+
+
+
+/* ------------------- city.html start ------------ */
+
+.city-header {
+    overflow: auto; 
+    background-color: #F8F8F8;
+}
+
+.city-background {
+    background-color: #F8F8F8;
+}
+
+.cityinformation{
+    border:solid 2px black; 
+    overflow:auto; 
+    background-color:white;
+}
+
+.cityLeft {
+    margin-top:5px; 
+    margin-bottom:5px;
+}
+
+.cityLeft > div {
+    margin-left:-8px;
+}
+
+.cityLeft > img {
+    margin:auto;
+}
+
+.cityRight {
+    padding-left:0px;
+}
+
+.city-all-items {
+    overflow:auto;
+}
+
+.city-item-select:first-child {
+    border-top:1px solid black;
+}
+
+.cityMap{
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align:center;
+}
+
+.cityMap > img {
+    width:300px; 
+    height:240px;
+}
+
+.cityStats {
+    margin-top:20px; 
+    text-align:right; 
+    overflow:auto;
+}
+
+#line-above-comment {
+    margin-top: 10px; 
+    border: 1px solid gainsboro;
+}
+
+.user-comment {
+    overflow: auto; 
+    margin-left: auto; 
+    margin-right: auto; 
+    background-color: white;
+}
+
+.city-reviews {
+    overflow:auto; 
+    min-height:180px; 
+    padding: 10px 10px 10px 10px;
+}
+
+.city-user-image {
+    width:100px; 
+    height:100px;
+}
+
+.userDetail {
+    margin-left:10px;
+}
+
+.contribution {
+    margin-top:5px;
+}
+
+.glyphicon-star {
+    color:green; 
+    font-size:20px;
+}
+
+#city-follower-image {
+    width:20px; 
+    height:20px;
+}
+
+.city-reviews .review {
+    border: 4px solid #F1F1F1; 
+    min-height:inherit;
+}
+
+.city-reviews .title {
+    color:blue; 
+    font-size:x-large; 
+    margin-top:10px;
+}
+
+.city-reviews .story {
+    margin-top:10px; 
+    line-height:18px;
+}
+
+.city-reviews .review-star {
+    padding-left:0px;
+}
+
+/* ------------------- city.html end ------------ */
+
+
+/* ------------------- dashboard.html start ------------ */
+
+.col {
+  padding-right:7px;
+  padding-left:7px;
+}
+
+#follower-image:hover {
+    cursor:pointer;
+}
+
+.dashboard-main{
+    margin-top:50px;
+}
+
+.dash-image  > div {
+     border: 1px solid black; 
+     background-color: white;
+}
+
+.dash-image .user-image {
+    width:100%; 
+    height:150px; 
+    padding:10px;
+}
+
+.dash-user-info {
+    text-align:center;
+}
+
+.dash-user-info-list li {
+    padding:3px 3px 3px 3px;
+}
+
+.dash-user-info > a {
+    text-transform: capitalize; 
+    font-size: x-large;
+}
+
+.dashboard-contribution {
+    min-height: 480px; 
+    margin-bottom:50px; 
+    border: 1px solid black; 
+    float: left; 
+    background-color: white; 
+    padding-left:0px; 
+    padding-right:0px;
+}
+
+.dashboard-contribution  .dash-comment-region {
+    min-height: 450px;
+}
+
+.dashboard-contribution .comment {
+    width:95%;
+    margin-top:20px; 
+    overflow:auto;
+}
+
+.dashboard-contribution .review {
+    padding-right:0px;
+}
+
+.dashboard-contribution .review-posted {
+    float:right; 
+    text-align:right; 
+    padding-right:0px;
+}
+
+.dash-pagination {
+    text-align:center;
+}
+
+.dash-pagination > pagination {
+    position:relative; 
+    margin-top:50px; 
+    bottom:0px;
+}
+
+.dash-followers > div {
+    border:1px solid black; 
+    background-color: white; 
+    overflow: auto;
+}
+
+.dash-follower-images {
+    margin-top:5px; 
+    overflow:auto; 
+    margin-left:10px; 
+    margin-right:10px;
+}
+
+.user-followers {
+     float:left;
+}
+
+/* ------------------- dashboard.html end ------------ */
+
+
+/* ------------------- login.html start ------------ */
+
+.login-modal {
+    height: 60px; 
+    text-align: center; 
+    font-size: larger; 
+    padding:0px;
+}
+
+.signIn-header {
+    background-color:lightgray;
+}
+
+.login-header {
+    line-height:60px;
+}
+
+.login-input-group {
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 80%;
+}
+
+.login-input-group > input {
+    height:50px;
+}
+
+.login-modal-footer {
+    margin-top:0px; 
+    text-align:center;
+}
+
+.login-modal-footer > button {
+    width:80%; 
+    height:40px;
+}
+
+/* ------------------- login.html end ------------ */
+
+/* ------------------- message.html end ------------ */
+
+.message-table {
+    margin-top:30px; 
+    width:70%; 
+    background-color:white; 
+    margin-right:auto; 
+    margin-left:auto;
+}
+
+.message-table .message {
+    height:90px;
+}
+
+.senderImage > img {
+     width:80px; 
+     height:80px; 
+}
+
+#message-userName {
+    font-weight:600;
+}
+/* ------------------- message.html end ------------ */
+
+/* ------------------- messageDetails.html start ------------ */
+
+.message-indox {
+    margin-top: 50px; 
+    width: 70%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    background-color: white; 
+    padding: 10px 10px 10px 10px; 
+    border: 1px solid #bdc3c7; 
+    margin-bottom:50px;
+}
+
+.message-indox  textarea {
+    height:150px; 
+    width:100%;
+}
+
+.message-indox button {
+    margin-top:10px;
+}
+
+.message-indox .messages {
+    overflow:hidden; 
+    margin-top:20px;
+}
+
+.message-indox img {
+    width:50px; 
+    height:50px; 
+    border-radius:50%;
+}
+
+#message-date {
+    color: #808d8e;
+}
+
+/* ------------------- messageDetails.html end ------------ */
+
+/* ------------------- poi.html end ------------ */
+
+.point-of-interest {
+    margin-top: 50px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 70%; 
+    background-color: lightgrey;
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.city-suggested-places > div {
+    padding:10px 10px 10px 10px; 
+    overflow:auto;
+}
+
+.poi-image {
+    height: 100px; 
+    width: 100px;
+}
+
+.poi-name {
+    font-size: larger; 
+    font-weight: 700; 
+    margin-bottom: 10px;
+}
+
+.poi-address {
+    width:50%;
+}
+
+.poi-venue {
+    margin-top:10px;
+}
+
+.poi-price {
+    margin-top:10px;
+}
+/* ------------------- poi.html end ------------ */
+
+/* ------------------- profile.html start ------------ */
+
+.profile {
+    margin-top:100px; 
+    width:80%; 
+    margin-bottom:50px; 
+    margin-left:auto; 
+    margin-right:auto
+}
+
+.profile-left-col {
+    text-align:center;
+}
+
+.profile-left-col .unused {
+    width:102px; 
+    margin-left:auto; 
+    margin-right:auto; 
+    margin-top:10px;
+}
+
+.profile-left-col img {
+    width:100px;
+    height:100px;
+}
+
+.profile-left-col .upload {
+    margin-top:10px;
+}
+
+.profile-left-col ul {
+    margin-top:10px;
+    line-height:20px;
+}
+
+.profile-left-col button {
+    width: 110px;
+    margin-top: 20px;
+}
+
+.user-info {
+    min-height:430px; 
+    background-color:white; 
+    overflow:auto;
+}
+
+.user-info #description {
+    width:100%; 
+    height:200px;
+}
+
+.user-info #country {
+    width:100%;
+}
+
+.profile-submit-changes {
+    margin:0 auto; 
+    text-align:center;
+    margin-top:20px;
+    margin-bottom:30px;
+}
+
+/* ------------------- profile.html end ------------ */
+
+/* ------------------- review.html start ------------ */
+
+.review-main {
+    width:60%; 
+    background-color:white; 
+    border:1px solid black;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:10px
+}
+
+.cityHeading {
+    height: 120px; 
+    text-align: center; 
+    margin-left:-10px;
+}
+
+.review-back-image {
+    background-repeat: no-repeat; 
+    background-size: 100%; 
+    background-position: center; 
+    position: absolute; 
+    width: 60%; 
+    height: 120px; 
+    -webkit-filter: brightness(50%);
+}
+
+.cityImage > img {
+    width:110px; 
+    height:110px; 
+    border:1px solid white;
+}
+
+.review-rating {
+    font-weight:bold; 
+    margin-top:20px;
+}
+
+.review_title > input {
+    padding: 5px; 
+    margin: 10px 0px 10px 0px; 
+    width: 90%; 
+    box-shadow: inset 0 1px 2px 0 rgba(50,50,50,0.3); 
+    line-height: 25px; 
+}
+
+.review_textarea {
+    box-shadow: inset 0 1px 2px 0 rgba(50,50,50,0.3);
+}
+
+.review_submit {
+    text-align:center; 
+    margin-top:20px;
+}
+
+.review_submit > button {
+    margin-left:auto;
+    margin-right:auto; 
+    margin-bottom:50px;
+}
+/* ------------------- review.html end ------------ */
+@media only screen and (min-width : 768px) {
+    .user-image-navbar >img {
+        margin-top:10px;
+    }
+
+    #big-screen {
+        display:block;
+    }
+    #small-screen {
+        display:none;
+    }
+    #big-screen {
+        padding: 25px 0;
+        border: 0;
+        background-color: transparent;
+    }
+    #big-screen .nav li a:hover {
+        color: white;
+    }
+    #big-screen .nav li a {
+        text-transform: capitalize;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #fff;
+    }
+}
+
+#other-pages-nav .nav li a {
+        text-transform: capitalize;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: black
+    }
+
+@media only screen and (max-width : 768px) {
+    #big-screen {
+        display:none;
+    }
+    #small-screen {
+        display:block;
+    }
+    #big-screen, #small-screen {
+        border: 0;
+        background-color: white;
+    }
+    #big-screen .nav li a:hover, #small-screen .nav li a:hover {
+        color: black;
+    }
+    #big-screen .nav li a, #small-screen .nav li a {
+        text-transform: capitalize;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: black;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 768px) {
+    .user-image-navbar >img {
+        margin-top:0px;
+    }
+}
+
+@media only screen and (max-width : 600px){
+
+    .user-image-navbar >img {
+        display:none;
+    }
+    .dropdown{
+        display:none;
+    }
+}
+
+@media only screen and (min-width : 960px) and (max-width : 1200px) {
+
+    .profile{
+        width:100%
+    }
+}
+
+
+.dropdown-menu li a:hover {
+    background-color:lightblue;
+}
+
+#other-pages-nav {
+    background-color:white;
+}
+
+#follower-image{
+    padding-left:5px; 
+    height:50px; 
+    padding-right:5px; 
+    padding-bottom:5px;
+}
+
+.question {
+    margin: 20px 0px 20px 0px;
+}
+
+#Review {
+    padding:5px; 
+    margin:10px 0px 10px 0px; 
+    height:150px; 
+    width:90%;
+}
+
+.move-down {
+    margin-top: 100px;
+}
+
+.caret-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-bottom: 4px solid;
+    
+    display: inline-block;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+
+.messages:hover {
+    cursor: pointer
+}

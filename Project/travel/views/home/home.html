@@ -1,0 +1,159 @@
+﻿
+<div style="width: auto; height: 500px; background-image: url(res/home.jpg); background-repeat: no-repeat; background-size: 100% 100%; background-color: ivory">
+
+    <nav id="big-screen" class="navbar navbar-default ng-scope">
+        <div class="main-header" style="margin-left:20px; margin-right:20px">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="travel-logo">
+                    <i class="fa fa-plane" style="color: white; font-size: -webkit-xxx-large"></i>
+                    <span style="font-size:x-large; vertical-align:super; color:coral">Travel<span style="color:cornsilk">Globe</span></span>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" style="margin-right:10px">
+                    <li class="dropdown" ng-show="currentUser">
+                        <a href="#/home" class="dropdown-toggle" data-toggle="dropdown">
+                            <div style="color:white">
+                                <img class="user-profile-image" style="width: 32px; height: 32px; border-radius: 50%; margin-right:15px; border: 2px solid #fff;" ng-src="{{userImage}}" fallback-src="img/user.png" />
+                                <span class="value_name" style="vertical-align:middle">{{currentUser}}</span>
+                                <b class="caret caret-home"></b>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" style="min-width:100px">
+                            <li><a href="#/dashboard" style="color:black">Dashboard</a></li>
+                            <li><a href="#/profile/{{currentUser}}" style="color:black">Profile</a></li>
+                            <li ng-click="logout()"><a href="#/home" style="color:black">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li style="margin-left:-10px" ng-show="currentUser">
+                        <a href="#/messages/{{currentUser}}"><i class="fa fa-envelope-o" style="font-size:large; color:white; margin-top:7px"></i></a>
+                    </li>
+
+                    <li ng-show="!currentUser" id="sign_up" class="pull-left medium-right-margin">
+                        <a class="cd-signup link-reset login-header" ng-click="open('signUp')" data-signup-modal="" data-header-view="true" rel="nofollow" style=" text-decoration: none">
+                            Sign Up
+                        </a>
+                    </li>
+                    <li ng-show="!currentUser" id="login" class="pull-left">
+                        <a data-login-modal="" ng-click="open('signIn')" class="cd-signin link-reset login-header" rel="nofollow" style=" text-decoration: none">
+                            Log In
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <nav id="small-screen" class="navbar navbar-default navbar-fixed-top ng-scope">
+        <div class="main-header" style="margin-left:20px; margin-right:20px">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div style="width: 200px; float: left; margin-top: 10px; margin-left: 10px; font-family: initial;">
+                    <a href="#/home" style="text-decoration:none">
+                        <span id="logo-first-name">Travel<span id="logo-second-name">Globe</span></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="" ng-click="scrollTo('#page-top')"></a>
+                    </li>
+                    <li class="user-image-navbar" ng-show="currentUser">
+                        <img class="user-profile-image" style="width: 32px; height: 32px; border-radius: 50%; margin-right:15px; border: 2px solid #fff;" ng-src="{{userImage}}" fallback-src="img/user.png" />
+                    </li>
+                    <li ng-show="currentUser">
+                        <a class="page-scroll" href="#/dashboard">DashBoard</a>
+                    </li>
+                    <li ng-show="currentUser">
+                        <a class="page-scroll" href="#/profile/{{currentUser}}">Profile</a>
+                    </li>
+                    <li ng-show="currentUser">
+                        <a class="page-scroll" href="#/messages/{{currentUser}}">Messages</a>
+                    </li>
+                    <li ng-show="currentUser">
+                        <a class="page-scroll" href="#/home" ng-click="logout()">Logout</a>
+                    </li>
+                    <li ng-show="!currentUser">
+                        <a class="page-scroll" href="" ng-click="open('signIn')">Login</a>
+                    </li>
+                    <li ng-show="!currentUser">
+                        <a class="page-scroll" href="" ng-click="open('signUp')">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+        <div class="container">
+            <div class="intro-area" style="color:white">
+                <p>
+                    LOSE | YOURSELF |
+                </p>
+                <p>
+                    DISCOVER | YOURSELF
+                </p>
+            </div>
+            <div class="searchForm" style="margin-top:-50px; align-content:center">
+                <form class="search-city" id="form" role="form" name="but" style="margin-left:auto; margin-right:auto">
+                    <div class=" input-group move-down">
+                        <input type="text" id="Autocomplete2" style="height:40px" ng-keypress="($event.which == 13)? newCity1(details):0" placeholder="Where you want to go ?" class="form-control" ng-model="autocomplete" ng-autocomplete="result" options="options" details="details" />
+                        <span class="input-group-btn">
+                            <a class="btn btn-primary" ng-click="setCityID(details)" href="#/destination/{{details.formatted_address}}/lat={{details.geometry.location.k.toFixed(2)}}/lon={{details.geometry.location.D.toFixed(2)}}" style="width:80px; height:40px">Search</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
+
+
+<div class="container discover-titles" style="width:80%">
+    <h2>
+        Best Places To Visit 
+    </h2>
+    <p> Got Bored? Pack your bags</p>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 discover-titles-image">
+            <a href="#/destination/New York, NY, USA/lat=41/lon=-74" ng-click="setCityIDFixed('ChIJOwg_06VPwokRYv534QaPC8g')">
+                <img class="best-place img-responsive" src="img/new-york.jpg" />
+            </a>
+            <h2 class="text-over-image">new york</h2>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4 discover-titles-image">
+            <a href="#/destination/Sydney NSW, Australia/lat=-34/lon=151" ng-click="setCityIDFixed('ChIJP3Sa8ziYEmsRUKgyFmh9AQM')">
+                <img class="best-place img-responsive" src="img/sydney.jpg"/>
+            </a>
+            <h2 class="text-over-image">sydney</h2>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4 discover-titles-image">
+            <a href="#/destination/Rome, Italy/lat=42/lon=12" ng-click="setCityIDFixed('ChIJu46S-ZZhLxMROG5lkwZ3D7k')">
+                <img class="best-place img-responsive" src="img/rome.jpg" />
+            </a>
+            <h2 class="text-over-image">rome</h2>
+        </div>
+    </div>
+</div>

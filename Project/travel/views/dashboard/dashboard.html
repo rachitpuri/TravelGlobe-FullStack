@@ -1,0 +1,114 @@
+﻿<nav id="other-pages-nav" class="navbar navbar-default ng-scope">
+    <div class="main-header" style="margin-left:20px; margin-right:20px">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="travel-logo">
+                <a href="#/home" style="text-decoration:none">
+                    <span id="logo-first-name">Travel<span id="logo-second-name">Globe</span></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="" ng-click="scrollTo('#page-top')"></a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/dashboard">DashBoard</a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/profile/{{currentUser}}">Profile</a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/messages/{{currentUser}}">Messages</a>
+                </li>
+                <li ng-show="currentUser">
+                    <a class="page-scroll" href="#/home" ng-click="logout()">Logout</a>
+                </li>
+                <li ng-show="!currentUser">
+                    <a class="page-scroll" href="" ng-click="open('signIn')">Login</a>
+                </li>
+                <li ng-show="!currentUser">
+                    <a class="page-scroll" href="" ng-click="open('signUp')">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+<div class="city-header">
+    <div class="dashboard-main container">
+        <div class="row">
+            <div class="dash-image col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                <div>
+                    <img ng-src="{{userImage}}" class="user-image img-circle img-rounded"/>
+                    <div class="dash-user-info">
+                        <a href="#/profile/{{user.username}}">{{user.username}}</a>
+                        <ul class="dash-user-info-list">
+                            <li>Followers : {{user.followers.length}}</li>
+                            <li>Following : {{user.following.length}}</li>
+                            <li>Reviews : {{reviewCount}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-contribution col-lg-7 col-md-7 col-sm-8 col-xs-8">
+                <div class="dash-comment-region">
+                    <h3 class="review-heading">My Reviews</h3>
+                    <div class="comment" ng-repeat="review in reviews">
+                        <div class="review-cityName col-lg-3 col-md-3">
+                            {{review.cityName.split(',')[0]}}
+                        </div>
+                        <div class="review col-lg-9 col-md-9">
+                            <div>
+                                <div class="review-title col-lg-8 col-md-8">
+                                    {{review.title}}
+                                </div>
+                                <div class="review-posted col-lg-4 col-md-8">{{review.date | date: 'longDate'}}</div>
+                            </div>
+                            <div class="review-story">
+                                {{review.story | limitTo: review.numLimit || 50}}
+                                <a class="readmore" ng-show="review.story.length > 50" ng-click="readMore(review, $index)">read more <i class="fa fa-caret-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-pagination">
+                    <pagination total-items="bigTotalItems" ng-model="bigCurrentPage" ng-click="getPage()" max-size="maxSize" class="pagination-sm" boundary-links="true"></pagination>
+                </div>
+
+            </div>
+
+            <div class="dash-followers col-lg-3 col-md-3 col-sm-5 col-xs-5">
+                <div>
+                    <div class="review-heading">Followers</div>
+                    <div class="dash-follower-images">
+                        <div class="user-followers" ng-repeat="follower in followers">
+                            <img id="follower-image" class="img-responsive img-rounded" ng-src="{{follower.image}}" data-toggle="tooltip" data-placement="left" title="{{follower.username}}" ng-click="followerProfile(follower.username)" />
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top:20px">
+                    <div class="review-heading">Following</div>
+                    <div class="dash-follower-images">
+                        <div class="user-followers" ng-repeat="following in followings">
+                            <img id="follower-image" class="img-responsive img-rounded" ng-src="{{following.image}}" data-toggle="tooltip" data-placement="left" title="{{following.username}}" ng-click="followerProfile(following.username)" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
